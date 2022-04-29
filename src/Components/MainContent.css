@@ -1,0 +1,21 @@
+.MainContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80vh;
+}
+.MainContent > h1 {
+  margin: 0;
+  font-family: 'Nanum Myeongjo', serif;
+  font-weight: 600;
+  font-size: 5.5em;  
+}
+.MainContent > h2 {
+  display: flex;
+  font-weight: 600;
+  font-size: 1em;  
+}
+.MainContent > h2 > img {
+  filter: invert(100%);
+  margin-right: 5px;
+}

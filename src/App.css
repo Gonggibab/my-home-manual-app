@@ -1,23 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&family=Noto+Serif+KR:wght@400;600&display=swap');
 :root {
     /* Margin */
 
     /* Color */
-
+    --white: #FFFFFF;
 }
 
-body {  
+body {
+  display: flex;
+  justify-content: center;
+  margin: 0;
   width: 100%;
   height: 100vh;
+  font-family: 'Noto Serif KR', serif;
+  font-size: 16px;
+  color: var(--white);
   background-image: url('./Images/background-img.jpg');
   background-repeat : no-repeat;
   background-size : cover;
   background-position: bottom;
+  backdrop-filter: brightness(80%);
+  image-rendering: -webkit-optimize-contrast;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a, a:link, a:visited {
+    padding: 5px 10px;
+    color: var(--white);
+    font-family: 'Noto Serif KR', serif;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.8em;    
+    letter-spacing: 1px;
 }
 
 .App {
+  display: flex;
+  flex-direction: column;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  width: 80vw;
   letter-spacing: 0.5px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
