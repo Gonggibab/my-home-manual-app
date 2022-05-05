@@ -13,6 +13,6 @@ mongoose
     console.log(err);
   });
 
-app.listen(PORT, () => {
-  console.log(`App listening on port ${PORT}`)
+app.listen(PORT || 5000, () => {
+  console.log(`App listening on port ${PORT || 5000}`)
 })
