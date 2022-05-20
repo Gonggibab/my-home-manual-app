@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&family=Noto+Serif+KR:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&family=Noto+Serif+KR:wght@400;600&display=swap');
 :root {
     /* Margin */
 
     /* Color */
     --white: #FFFFFF;
+    --light-gray: #E0E0E0;
+    --shodow-black: #3f3f3f;
 }
 
 body {
@@ -17,15 +19,17 @@ body {
   color: var(--white);
   background-image: url('./Images/background-img.jpg');
   background-repeat : no-repeat;
-  background-size : cover;
   background-position: bottom;
+  background-size: cover;
   backdrop-filter: brightness(80%);
+  transition: all 0.5ms;
   image-rendering: -webkit-optimize-contrast;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* <a> tag */
 a, a:link, a:visited {
     padding: 5px 10px;
     color: var(--white);
@@ -33,7 +37,40 @@ a, a:link, a:visited {
     text-decoration: none;
     font-weight: 400;
     font-size: 0.8em;    
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
+    transition: all 500ms;
+}
+
+
+/* <input> tag */
+/* Remove input autofill */
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s, transform 500ms;
+}
+input {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Noto Serif KR', serif;
+  font-weight: 400; 
+  background: rgb(255, 255, 255, 0.4);
+  transition: transform 500ms;
+}
+input:focus{  
+  outline: none;
+  transform: scale(1.02);
+}
+
+
+/* <button> tag */
+button {
+  border:none;
+  border-radius: 5px;
+  font-family: 'Noto Serif KR', serif;
+  font-weight: 600;  
+  transition: all 500ms;
+  cursor: pointer;
 }
 
 .App {
@@ -41,5 +78,5 @@ a, a:link, a:visited {
   flex-direction: column;
   margin: 0;
   width: 80vw;
-  letter-spacing: 0.5px;
+  letter-spacing: 1.5px;
 }

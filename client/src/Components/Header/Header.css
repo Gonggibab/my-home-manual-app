@@ -1,0 +1,38 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+  margin-top: 3vh;
+}
+
+/* logo img */
+.logo-white-img {
+  margin-right: 2vw;
+  height: 40px;
+}
+
+
+/* nav-bar */
+.nav-bar {
+  display: flex;
+  align-items: center;
+}
+.nav-bar > a {
+  margin-right: 10px;
+}
+.nav-bar > a:hover {
+  transform: translateY(-3px);
+  text-shadow: 1px 1px 10px var(--shodow-black);
+}
+
+
+/* login-btn */
+.login-btn > a {
+  display: flex;
+}
+.login-btn > a:hover {
+  transform: translateY(-3px);
+}
+.login-btn > a > svg {
+  margin-left: 3px;
+}
