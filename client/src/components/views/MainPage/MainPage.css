@@ -1,0 +1,23 @@
+.MainPage {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90vh;
+}
+.MainPage > h1 {
+  margin: 0;
+  font-family: 'Nanum Myeongjo', serif;
+  font-weight: 600;
+  font-size: 5.5em;  
+}
+.MainPage > h2 {
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 1em;  
+}
+.MainPage > h2 > svg {
+  margin-right: 8px;
+}

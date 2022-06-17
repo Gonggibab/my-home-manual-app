@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&family=Noto+Serif+KR:wght@400;600&display=swap');
+:root {
+    /* Margin */
+
+    /* Color */
+    --white: #FAFAFA;
+    --dark-white: #EEEEEE;
+    --light-gray: #BDBDBD;
+    --gray: #757575;
+    --black: #212121;
+    --shodow-black: #3f3f3f;
+    --red: #D61C4E;
+    --err-red: #dd2323;
+    --orange: #F77E21;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  font-family: 'Noto Serif KR', serif;
+  font-size: 16px;
+  color: var(--white);
+  background-image: url('../Images/background-img.jpg');
+  background-repeat : no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  backdrop-filter: brightness(80%);
+  overflow: hidden;
+  transition: all 0.5ms;
+  image-rendering: -webkit-optimize-contrast;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Disable text selection */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  width: 90vw;  
+  min-width: 1000px;
+  letter-spacing: 1.5px;  
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  width: 90vw;  
+  min-width: 1000px;
+  letter-spacing: 1.5px;  
+}
+
+/* <a> tag */
+a, a:link, a:visited {
+    padding: 5px 10px;
+    color: var(--white);
+    font-family: 'Noto Serif KR', serif;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.8em;    
+    letter-spacing: 1.5px;
+    transition: all 500ms;
+    cursor: pointer;
+}
+
+/* <input> tag */
+/* Remove input autofill */
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s, transform 500ms;
+}
+input {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Noto Serif KR', serif;
+  font-weight: 400; 
+  background: rgb(255, 255, 255, 0.4);
+  transition: transform 500ms;
+}
+input:focus{  
+  outline: none;
+  transform: scale(1.02);
+}
+
+/* <button> tag */
+button {
+  border:none;
+  border-radius: 5px;
+  font-family: 'Noto Serif KR', serif;
+  font-weight: 600;  
+  transition: all 500ms;
+  cursor: pointer;
+}
+
+/* <ul> <li> tag */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  cursor: pointer;
+  font-family: 'Noto Serif KR', serif;
+  font-weight: 400;
+  font-size: 0.8em;    
+  background: rgb(255, 255, 255, 0.1);
+  transition: all 500ms;
+}
+
+/* Scroll Bar design */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #2f3542;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 1px solid transparent;
+}
+::-webkit-scrollbar-track {
+  background-color: grey;
+  border-radius: 10px;
+}

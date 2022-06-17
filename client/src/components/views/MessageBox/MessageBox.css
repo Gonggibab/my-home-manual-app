@@ -1,0 +1,71 @@
+.message-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  bottom: 0px;
+  right: 50px;
+  width: 300px;
+  height: 500px;
+  border-radius: 5px;  
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 0px 5px var(--gray);
+}
+
+.message-box > svg {  
+  position: absolute;
+  top: 13px;
+  right: 14px;
+  transition: all 500ms;
+  color: var(--light-gray);
+  border-radius: 20px;
+  cursor: pointer;
+}
+.message-box > svg:hover {
+  color: var(--gray);
+}
+
+.message-box > ul {
+  display: flex;
+  flex-direction: row;  
+  margin: 10px;
+  font-weight: 600;
+  font-size: 1em;
+  border-radius: 5px; 
+  box-shadow: 0px 0px 5px var(--light-gray);
+}
+.message-box > ul > li{    
+  padding: 5px 15px;
+  border-radius: 5px;  
+  color: var(--black);
+}
+.message-box > ul > li:hover{
+  background-color: var(--light-gray);
+}
+
+
+/**************************/
+/* .MessageButton */
+/**************************/
+.MessageButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: var(--gray);
+  cursor: pointer;
+  transition: all 500ms;
+}
+.MessageButton:hover {
+  background-color: var(--light-gray);
+  transform: translateY(-2px);
+}
+.MessageButton > svg {
+  margin: 2px 2px 0 0;
+}

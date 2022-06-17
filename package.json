@@ -4,9 +4,13 @@
   "scripts": {
     "client": "cd client & npm run start",
     "server": "cd server & nodemon index.js",
-    "dev": "concurrently --kill-others-on-fail \"npm client\" \"npm server\""
+    "dev": "concurrently \"npm run client\" \"npm run server\""
   },
   "devDependencies": {
     "nodemon": "^2.0.16"
+  },
+  "dependencies": {
+    "concurrently": "^7.2.0",
+    "eslint": "^8.16.0"
   }
 }

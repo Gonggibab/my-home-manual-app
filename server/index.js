@@ -1,20 +1,25 @@
 require("dotenv").config();
+const cors = require("cors")
 const mongoose = require("mongoose");
-const express = require("express")
-const app = express()
-const { PORT, MongoDB_URL } = process.env
-const { User } = require("./models/User")
+const express = require("express");
+const app = express();
+const config = require("./config/key");
+var cookieParser = require("cookie-parser");
 
 
+// Allow port 3000
+app.use(cors({ origin: "http://localhost:3000", credentials: true }));
 // For json request 
 app.use(express.json({ extended: true }));
 // For urlencoded request
 app.use(express.urlencoded({ extended: true }));
+// For cookie request
+app.use(cookieParser());
 
 
 // Connect to MongoDB
 mongoose
-  .connect(MongoDB_URL)
+  .connect(config.MongoDB_URL)
   .then(() => {
     console.log("Connected to Database");
   })
@@ -22,49 +27,21 @@ mongoose
     console.log(err);
   });
 
-
-// Users api
-// Register
-app.post('/api/users/register', (req, res) => {
-  const user = new User(req.body)
-  user.save((err, userInfo) => {
-    if (err) {
-      return res.json({
-        sucess: false,
-        err
-      })
-    }
-    return res.status(200).json({
-      success: true
-    })
-  })
-})
-// Login
-app.post('/api/users/login', (req, res) => {
-  User.findOne({ userId: req.body.userId }, (err, user) => {
-    if (!user) {
-      return res.json({
-        loginsuccess: false,
-        message: "제공된 아이디에 해당하는 유저가 없습니다"
-      })
-    }
-
-    user.comparePassword(req.body.userPass, (err, isMatch) => {
-      if (!isMatch) {
-        return res.json({
-          loginsuccess: false,
-          message: "제공된 비밀번호가 틀렸습니다"
-        })
-      }
-
-
-    })
-
-  })
-
+app.get('/', (err, res) => {
+  console.log('hello');
 })
 
 
-app.listen(PORT || 5000, () => {
-  console.log(`App listening on port ${PORT || 5000}`)
-})
+app.use('/api/users', require('./routes/UserRoute'));
+app.use('/api/images', require('./routes/ImageRoute'));
+app.use('/api/story', require('./routes/StoryRoute'));
+
+
+// to show images in the server to the client
+app.use('/uploads/images', express.static('uploads/images'));
+
+
+
+app.listen(config.PORT || 5000, () => {
+  console.log(`App listening on port ${config.PORT || 5000}`);
+});

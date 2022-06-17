@@ -1,0 +1,57 @@
+.UserRegisterPage {
+  display: flex;
+  flex-direction: column;  
+  align-self: center;
+  margin-top: 10vh;
+  padding: 5vh 7vw;
+  height: 680px;
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px var(--shodow-black);
+}
+
+.UserRegisterPage > h1 {
+  margin: 0 0 40px 0;
+  align-self: center;
+  letter-spacing: 2px;
+}
+
+.UserRegisterPage > h3 {
+  margin: 0 10px;
+  font-family: 'Noto Serif KR', serif;
+  font-weight: 400;
+  font-size: 0.8em;
+}
+
+.UserRegisterPage > input { 
+  margin: 10px 0 20px 10px;
+  width: 360px;
+  height: 20px;
+  letter-spacing: 1px;
+}
+
+/* <button> tag */
+.UserRegisterPage > button { 
+  margin: 20px;
+  align-self: center;
+  width: 150px;
+  height: 35px;
+  letter-spacing: 1.5px;  
+  box-shadow: 0px 0px 10px var(--shodow-black);
+}
+.UserRegisterPage > button:hover {
+  box-shadow: 0px 0px 10px var(--light-gray);
+}
+.UserRegisterPage > button:active {
+  box-shadow: inset 1px 1px 5px var(--shodow-black);
+}
+
+.UserRegisterPage > a { 
+  margin: 5px;
+  align-self: center;
+  text-decoration: underline;
+}
+.UserRegisterPage > a:hover { 
+  text-shadow: 0px 0px 10px var(--light-gray);
+}

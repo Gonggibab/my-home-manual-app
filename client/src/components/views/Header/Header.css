@@ -1,0 +1,88 @@
+/*******************************/
+/* Header component */
+/*******************************/
+.Header {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;  
+  top: 2vh;
+  width: 90%;
+  height: 55px;
+  z-index: 100;
+}
+
+/* logo img */
+.logo-white-img {
+  margin-right: 2vw;
+  height: 40px;
+}
+
+/* nav-bar */
+.nav-bar {
+  display: flex;
+  align-items: center;
+}
+.nav-bar > a {
+  margin-right: 10px;
+}
+.nav-bar > a:hover {
+  transform: translateY(-3px);
+  text-shadow: 1px 1px 10px var(--shodow-black);
+}
+
+
+
+/*******************************/
+/* LoginButton component*/
+/*******************************/
+.LoginButton > a {  
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 13px;
+}
+.LoginButton > a:hover {
+  transform: translateY(-3px);
+}
+.LoginButton > a > svg {
+  margin-left: 3px;
+}
+
+
+
+/*******************************/
+/* UserOption component*/
+/*******************************/
+.UserOption > {
+  display: flex;
+  flex-direction: column;
+}
+.UserOption > h3 {  
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 18px;
+  font-family: 'Noto Serif KR', serif;
+  font-weight: 400;
+  font-size: 0.8em; 
+}
+.UserOption > h3 > svg {
+  margin-top: 4px;
+  margin-left: 8px;
+  cursor: pointer;  
+  transition: transform 500ms;
+}
+.UserOption > h3 > svg:hover {
+  transform: translateY(-2px);
+}
+.UserOption > ul {
+  position: relative;
+  bottom: 5px;
+}
+.UserOption > ul > li {
+  height: 20px;
+  width: 150px;
+}
+.UserOption > ul > li:hover {  
+  background: rgb(255, 255, 255, 0.2);
+}
